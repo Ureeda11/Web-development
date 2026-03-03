@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl p-6">
+    
+    <!-- Header -->
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-extrabold text-indigo-600">To-Do App</h1>
+      <p class="text-gray-500 text-sm">Stay organized. Stay productive.</p>
+    </div>
+
+    <!-- Input -->
+    <div class="flex gap-2 mb-4">
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="What do you need to do?"
+        class="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+      <button
+        onclick="addTask()"
+        class="bg-indigo-500 text-white px-5 py-2 rounded-xl font-semibold hover:bg-indigo-600 active:scale-95 transition"
+      >
+        Add
+      </button>
+    </div>
+
+    <!-- Task List -->
+    <ul
+      id="taskList"
+      class="space-y-3 max-h-80 overflow-y-auto pr-1"
+    ></ul>
+
+    <!-- Footer -->
+    <p class="text-center text-xs text-gray-400 mt-6">
+      Tasks are saved automatically 💾
+    </p>
+  </div>
+
+  <script src="file.js"></script>
+</body>
+</html>
